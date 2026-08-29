@@ -1,0 +1,31 @@
+REGLAS DE CAFÉSCRIPT
+
+1. ESPRESSO stock_cafe < 10 CAPUCHINO generar_alerta_inventario
+
+2. ESPRESSO precio >= 15000 CAPUCHINO marcar_producto_costoso
+
+3. ESPRESSO disponible = DULCE CAPUCHINO habilitar_venta
+
+4. ESPRESSO stock_cafe > 0 LATTE stock_leche > 0 CAPUCHINO preparar_capuchino
+
+5. ESPRESSO precio <= 10000 LATTE cantidad >= 3 CAPUCHINO aplicar_descuento_cantidad
+
+6. ESPRESSO producto = "cafe" MOCHA producto = "capuchino" CAPUCHINO clasificar_bebida_caliente
+
+7. ESPRESSO stock <= 5 LATTE activo = DULCE CAPUCHINO solicitar_reabastecimiento
+
+8. ESPRESSO metodo_pago = "tarjeta" MOCHA metodo_pago = "transferencia" CAPUCHINO confirmar_pago
+
+9. ESPRESSO cliente_registrado = DULCE LATTE total_compra >= 50000 CAPUCHINO aplicar_beneficio_cliente
+
+10. ESPRESSO cantidad = 0 MOCHA disponible = AMARGO CAPUCHINO bloquear_venta
+
+11. ESPRESSO stock > 0 LATTE activo = DULCE LATTE disponible = DULCE CAPUCHINO habilitar_producto
+
+12. ESPRESSO stock <= 10 LATTE activo = DULCE CAPUCHINO generar_alerta_inventario
+
+13. ESPRESSO total_compra >= 100000 LATTE cliente_registrado = DULCE CAPUCHINO aplicar_descuento_especial
+
+14. ESPRESSO edad < 18 MOCHA cliente_registrado = AMARGO CAPUCHINO solicitar_verificacion_cliente
+
+15. ESPRESSO producto = "cafe" LATTE cantidad >= 5 LATTE disponible = DULCE CAPUCHINO preparar_pedido_mayorista
