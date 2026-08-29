@@ -2,14 +2,14 @@
 
 ## Nombre del grupo
 
-**Grupo X**
+**Grupo 03**
 
 ## Integrantes
 
-* Integrante 1
-* Integrante 2
-* Integrante 3
-* Integrante 4
+* Juan Felipe Valencia Gallego
+* Sebastian Guevara Perez
+* Santiago Sosa Marin
+* Karol Valeria Barrios Ordoñez
 
 ---
 
