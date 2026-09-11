@@ -1,31 +1,38 @@
-REGLAS DE CAFÉSCRIPT
+---
 
-1. ESPRESSO stock_cafe < 10 CAPUCHINO generar_alerta_inventario
+### `reglas.txt`
 
-2. ESPRESSO precio >= 15000 CAPUCHINO marcar_producto_costoso
+Aquí también hay que cambiar todos los `CLARO_QUE_SI` que teníamos antes por `YA_DIJO`.
 
-3. ESPRESSO disponible = DULCE CAPUCHINO habilitar_venta
+Pega esto:
 
-4. ESPRESSO stock_cafe > 0 LATTE stock_leche > 0 CAPUCHINO preparar_capuchino
+```text
+1. OBVIO_BOBIS estacion_disponible = YA_DIJO Y_ENTONCES permitir_reserva
 
-5. ESPRESSO precio <= 10000 LATTE cantidad >= 3 CAPUCHINO aplicar_descuento_cantidad
+2. OBVIO_BOBIS bateria_visor < 20 Y_ENTONCES generar_alerta_bateria
 
-6. ESPRESSO producto = "cafe" MOCHA producto = "capuchino" CAPUCHINO clasificar_bebida_caliente
+3. OBVIO_BOBIS mantenimiento = YA_DIJO Y_ENTONCES bloquear_estacion
 
-7. ESPRESSO stock <= 5 LATTE activo = DULCE CAPUCHINO solicitar_reabastecimiento
+4. OBVIO_BOBIS estacion_disponible = YA_DIJO ENCIMA pago_confirmado = YA_DIJO Y_ENTONCES iniciar_sesion
 
-8. ESPRESSO metodo_pago = "tarjeta" MOCHA metodo_pago = "transferencia" CAPUCHINO confirmar_pago
+5. OBVIO_BOBIS edad >= 12 ENCIMA experiencia_disponible = YA_DIJO Y_ENTONCES permitir_experiencia
 
-9. ESPRESSO cliente_registrado = DULCE LATTE total_compra >= 50000 CAPUCHINO aplicar_beneficio_cliente
+6. OBVIO_BOBIS mantenimiento = YA_DIJO O_QUE bateria_visor < 10 Y_ENTONCES bloquear_estacion
 
-10. ESPRESSO cantidad = 0 MOCHA disponible = AMARGO CAPUCHINO bloquear_venta
+7. OBVIO_BOBIS tiempo_sesion >= 60 ENCIMA sesion_activa = YA_DIJO Y_ENTONCES finalizar_sesion
 
-11. ESPRESSO stock > 0 LATTE activo = DULCE LATTE disponible = DULCE CAPUCHINO habilitar_producto
+8. OBVIO_BOBIS metodo_pago = "tarjeta" O_QUE metodo_pago = "transferencia" Y_ENTONCES habilitar_pago_digital
 
-12. ESPRESSO stock <= 10 LATTE activo = DULCE CAPUCHINO generar_alerta_inventario
+9. OBVIO_BOBIS reserva_activa = YA_DIJO ENCIMA pago_confirmado = YA_DIJO Y_ENTONCES asignar_estacion
 
-13. ESPRESSO total_compra >= 100000 LATTE cliente_registrado = DULCE CAPUCHINO aplicar_descuento_especial
+10. OBVIO_BOBIS estaciones_disponibles = 0 O_QUE centro_abierto = NI_POR_EL_PUTAS Y_ENTONCES rechazar_reserva
 
-14. ESPRESSO edad < 18 MOCHA cliente_registrado = AMARGO CAPUCHINO solicitar_verificacion_cliente
+11. OBVIO_BOBIS experiencia_multijugador = YA_DIJO ENCIMA cantidad_usuarios >= 2 Y_ENTONCES iniciar_multijugador
 
-15. ESPRESSO producto = "cafe" LATTE cantidad >= 5 LATTE disponible = DULCE CAPUCHINO preparar_pedido_mayorista
+12. OBVIO_BOBIS bateria_control <= 15 ENCIMA control_repuesto = YA_DIJO Y_ENTONCES reemplazar_control
+
+13. OBVIO_BOBIS valor_sesion >= 50000.0 ENCIMA usuario_miembro = YA_DIJO Y_ENTONCES aplicar_descuento
+
+14. OBVIO_BOBIS experiencia = "terror" ENCIMA edad < 16 Y_ENTONCES solicitar_autorizacion
+
+15. OBVIO_BOBIS estacion_disponible = YA_DIJO ENCIMA pago_confirmado = YA_DIJO ENCIMA mantenimiento = NI_POR_EL_PUTAS Y_ENTONCES habilitar_experiencia
